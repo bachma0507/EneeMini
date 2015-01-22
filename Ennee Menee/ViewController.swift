@@ -25,17 +25,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func feelingLuckyPressed(sender: AnyObject) {
         
-        var randomNumber1 = arc4random_uniform(100)
-        var randomNumber2 = arc4random_uniform(100)
-        var randomNumber3 = arc4random_uniform(100)
-        var randomNumber4 = arc4random_uniform(100)
-        var randomNumber5 = arc4random_uniform(100)
+        var randomNumber1 = arc4random_uniform(60)
+        var randomNumber2 = arc4random_uniform(60)
+        var randomNumber3 = arc4random_uniform(60)
+        var randomNumber4 = arc4random_uniform(60)
+        var randomNumber5 = arc4random_uniform(60)
+        var randomNumber6 = arc4random_uniform(35)
         
-        println("Your lucky numbers are: \(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5)")
+        println("Your lucky numbers are: \(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)")
         
         let alert = UIAlertView()
         alert.title = "Your Lucky Numbers"
-        alert.message = "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5)"
+        alert.message = "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)"
         alert.addButtonWithTitle("Ok")
         alert.show()
         
