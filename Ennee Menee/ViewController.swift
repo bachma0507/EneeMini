@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         if Int(randomNumber) == 3 {
             
-            resultLabel.text = "None of the above... those are fucking horrible choices. But try again if you insist."
+            resultLabel.text = "None of the above... c'mon, those are horrible choices. But try again if you insist."
             
         }
             
@@ -107,21 +107,21 @@ class ViewController: UIViewController {
         
         if Int(randomButton) == 1 {
             
-            goButton.setTitle("Let's do this shit!", forState: UIControlState.Normal)
+            goButton.setTitle("Let's do this!", forState: UIControlState.Normal)
             
             
         }
         
         if Int(randomButton) == 2 {
             
-            goButton.setTitle("Show me, you dick head!", forState: UIControlState.Normal)
+            goButton.setTitle("Show me, I want to know!", forState: UIControlState.Normal)
             
             
         }
         
         if Int(randomButton) == 3 {
             
-            goButton.setTitle("I am a hopeless idiot, please show me the way.", forState: UIControlState.Normal)
+            goButton.setTitle("I cannot make up my mind, please show me the way.", forState: UIControlState.Normal)
             
         }
 
