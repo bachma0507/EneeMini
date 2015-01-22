@@ -22,6 +22,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var arrowImage: UIImageView!
     
+    
+    @IBAction func feelingLuckyPressed(sender: AnyObject) {
+        
+        var randomNumber1 = arc4random_uniform(100)
+        var randomNumber2 = arc4random_uniform(100)
+        var randomNumber3 = arc4random_uniform(100)
+        var randomNumber4 = arc4random_uniform(100)
+        var randomNumber5 = arc4random_uniform(100)
+        
+        println("Your lucky numbers are: \(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5)")
+        
+        let alert = UIAlertView()
+        alert.title = "Your Lucky Numbers"
+        alert.message = "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5)"
+        alert.addButtonWithTitle("Ok")
+        alert.show()
+        
+    }
+    
     @IBAction func buttonPress(sender: AnyObject) {
         
         if !field1.text.isEmpty && !field2.text.isEmpty && !field3.text.isEmpty {
@@ -37,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
             
-        var randomNumber = arc4random_uniform(5)
+        var randomNumber = arc4random_uniform(4)
         
         if Int(randomNumber) == 0 {
             
@@ -50,6 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if Int(randomNumber) == 1 {
             
             resultLabel.text = "'\(field1.text)' is the way to go!"
+            
             println(field1.text)
             
         }
@@ -57,16 +77,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if Int(randomNumber) == 2 {
             
             resultLabel.text = "'\(field2.text)' is the way to go!"
+            
             println(field2.text)
             
         }
         
-        if Int(randomNumber) == 3 {
-            
-            resultLabel.text = "None of the above... c'mon, those are horrible choices. But try again if you insist."
-            
-            
-        }
             
 //            if Int(randomNumber) == 4 {
 //                
@@ -105,8 +120,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Looks for single or multiple taps.
-        
-        
         
         
         field1.delegate = self
