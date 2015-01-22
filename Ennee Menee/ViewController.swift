@@ -20,15 +20,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var goButton: UIButton!
     
+    @IBOutlet var arrowImage: UIImageView!
     
     @IBAction func buttonPress(sender: AnyObject) {
         
         if !field1.text.isEmpty && !field2.text.isEmpty && !field3.text.isEmpty {
             
+            arrowImage.hidden = false
+            arrowImage.image = UIImage(named:"green_down_arrows")!
             
             let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             loadingNotification.mode = MBProgressHUDModeIndeterminate
             loadingNotification.labelText = "Loading"
+            
             
             
         var randomNumber = arc4random_uniform(8)
@@ -95,6 +99,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //Looks for single or multiple taps.
         
+        
+        
+        
         field1.delegate = self
         field2.delegate = self
         field3.delegate = self
@@ -127,7 +134,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if Int(randomButton) == 3 {
             
-            goButton.setTitle("I cannot make up my mind, please show me the way.", forState: UIControlState.Normal)
+            goButton.setTitle("I don't know what to do, please help!", forState: UIControlState.Normal)
             
         }
 
@@ -146,6 +153,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             field2.text = nil
             field3.text = nil
             resultLabel.text = nil
+            arrowImage.hidden = true
             
             var randomButton = arc4random_uniform(4)
             
@@ -157,21 +165,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if Int(randomButton) == 1 {
                 
-                goButton.setTitle("Let's do this shit!", forState: UIControlState.Normal)
+                goButton.setTitle("Let's do this!", forState: UIControlState.Normal)
                 
                 
             }
             
             if Int(randomButton) == 2 {
                 
-                goButton.setTitle("Show me, you dick head!", forState: UIControlState.Normal)
+                goButton.setTitle("Show me, I want to know!", forState: UIControlState.Normal)
                 
                 
             }
             
             if Int(randomButton) == 3 {
                 
-                goButton.setTitle("I am a hopeless idiot, please show me the way.", forState: UIControlState.Normal)
+                goButton.setTitle("I don't know what to do, please help!", forState: UIControlState.Normal)
                 
             }
 
