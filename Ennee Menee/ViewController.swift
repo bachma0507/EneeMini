@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var field1: UITextField!
     
@@ -94,6 +94,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Looks for single or multiple taps.
+        
+        field1.delegate = self
+        field2.delegate = self
+        field3.delegate = self
+        
+        
         var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
@@ -181,7 +187,25 @@ class ViewController: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-
-
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var result = true
+        let prospectiveText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        
+        if textField == field1 || textField == field2 || textField == field3 {
+            if countElements(string) > 0 {
+                let disallowedCharacterSet = NSCharacterSet(charactersInString: "*")/*.invertedSet*/
+                let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
+                
+                let resultingStringLengthIsLegal = countElements(prospectiveText) <= 45
+                
+                result = replacementStringIsLegal &&
+                resultingStringLengthIsLegal
+            }
+        }
+        return result
+    }
+    
+    
 }
 
