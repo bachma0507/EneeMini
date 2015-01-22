@@ -70,13 +70,13 @@
                                     <action selector="buttonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZcG-Rw-ltt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your choices below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v3-2Z-KcF">
-                                <rect key="frame" x="90" y="115" width="194" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your choices below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v3-2Z-KcF">
+                                <rect key="frame" x="90" y="115" width="230" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="hgr-Be-iG2"/>
-                                    <constraint firstAttribute="width" constant="194" id="oyd-gb-VZq"/>
+                                    <constraint firstAttribute="height" constant="21" id="Q9N-jx-cuV"/>
+                                    <constraint firstAttribute="width" constant="230" id="dtk-k3-4sr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -96,8 +96,8 @@
                                     <constraint firstAttribute="height" constant="35" id="d9A-oV-bVV"/>
                                     <constraint firstAttribute="width" constant="223" id="dXa-3U-xSW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                <color key="textColor" red="1" green="0.21568627450980393" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Because sometimes life requires random choices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPS-HU-w8F">
@@ -135,6 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6v3-2Z-KcF" firstAttribute="top" secondItem="JPS-HU-w8F" secondAttribute="bottom" constant="23" id="0os-QO-QUo"/>
                             <constraint firstItem="9h3-dN-dLQ" firstAttribute="top" secondItem="EM4-n7-41p" secondAttribute="bottom" constant="18" id="0qu-SY-wRI"/>
                             <constraint firstItem="8Qo-So-Whz" firstAttribute="top" secondItem="6v3-2Z-KcF" secondAttribute="bottom" constant="2" id="59p-lL-wPn"/>
                             <constraint firstAttribute="centerX" secondItem="kOW-1B-A34" secondAttribute="centerX" id="7r0-0v-JgX"/>
@@ -154,6 +155,7 @@
                             <constraint firstAttribute="centerX" secondItem="ZA0-rE-Ecf" secondAttribute="centerX" id="o25-LZ-7SO"/>
                             <constraint firstAttribute="centerX" secondItem="9h3-dN-dLQ" secondAttribute="centerX" id="pXI-zO-E52"/>
                             <constraint firstItem="Juc-bF-d69" firstAttribute="top" secondItem="9h3-dN-dLQ" secondAttribute="bottom" constant="2" id="qb7-fc-quJ"/>
+                            <constraint firstAttribute="centerX" secondItem="6v3-2Z-KcF" secondAttribute="centerX" id="qlk-uw-4Sx"/>
                             <constraint firstItem="Hpj-NA-mnn" firstAttribute="top" secondItem="VJP-2r-n2G" secondAttribute="bottom" constant="8" id="rS2-Ga-KkD"/>
                             <constraint firstItem="VJP-2r-n2G" firstAttribute="top" secondItem="ZA0-rE-Ecf" secondAttribute="bottom" constant="8" id="vg2-5s-kmf"/>
                             <constraint firstItem="kOW-1B-A34" firstAttribute="top" secondItem="Juc-bF-d69" secondAttribute="bottom" constant="2" id="xM0-Jq-E8I"/>
@@ -170,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379.5" y="319.5"/>
+            <point key="canvasLocation" x="379" y="319"/>
         </scene>
     </scenes>
 </document>
