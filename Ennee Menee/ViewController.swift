@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if !field1.text.isEmpty && !field2.text.isEmpty && !field3.text.isEmpty {
             
+            DismissKeyboard()
+            
             arrowImage.hidden = false
             arrowImage.image = UIImage(named:"green_down_arrows")!
             
@@ -35,23 +37,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
             
-        var randomNumber = arc4random_uniform(8)
+        var randomNumber = arc4random_uniform(5)
         
         if Int(randomNumber) == 0 {
             
             resultLabel.text = "'\(field3.text)' is the way to go!"
+            
+            println(field3.text)
             
         }
         
         if Int(randomNumber) == 1 {
             
             resultLabel.text = "'\(field1.text)' is the way to go!"
+            println(field1.text)
             
         }
         
         if Int(randomNumber) == 2 {
             
             resultLabel.text = "'\(field2.text)' is the way to go!"
+            println(field2.text)
             
         }
         
@@ -59,25 +65,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             resultLabel.text = "None of the above... c'mon, those are horrible choices. But try again if you insist."
             
+            
         }
             
-            if Int(randomNumber) == 4 {
-                
-                resultLabel.text = "'\(field3.text)' is the way to go!"
-                
-            }
-            
-            if Int(randomNumber) == 5 {
-                
-                resultLabel.text = "'\(field1.text)' is the way to go!"
-                
-            }
-            
-            if Int(randomNumber) == 6 {
-                
-                resultLabel.text = "'\(field2.text)' is the way to go!"
-                
-            }
+//            if Int(randomNumber) == 4 {
+//                
+//                resultLabel.text = "'\(field3.text)' is the way to go!"
+//                
+//            }
+//            
+//            if Int(randomNumber) == 5 {
+//                
+//                resultLabel.text = "'\(field1.text)' is the way to go!"
+//                
+//            }
+//            
+//            if Int(randomNumber) == 6 {
+//                
+//                resultLabel.text = "'\(field2.text)' is the way to go!"
+//                
+//            }
 
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         }
