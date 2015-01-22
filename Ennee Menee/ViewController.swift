@@ -26,6 +26,11 @@ class ViewController: UIViewController {
         if !field1.text.isEmpty && !field2.text.isEmpty && !field3.text.isEmpty {
             
             
+            let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            loadingNotification.mode = MBProgressHUDModeIndeterminate
+            loadingNotification.labelText = "Loading"
+            
+            
         var randomNumber = arc4random_uniform(8)
         
         if Int(randomNumber) == 0 {
@@ -70,8 +75,7 @@ class ViewController: UIViewController {
                 
             }
 
-        
-        
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         }
         
         else {
@@ -89,6 +93,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //Looks for single or multiple taps.
+        var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
         
         var randomButton = arc4random_uniform(4)
         
@@ -168,6 +175,11 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0A6ACA1A704F990020674E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A6AC91A704F990020674E /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CBFAA961A6F5AC6009722F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFAA951A6F5AC6009722F3 /* AppDelegate.swift */; };
 		4CBFAA981A6F5AC6009722F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFAA971A6F5AC6009722F3 /* ViewController.swift */; };
 		4CBFAA9B1A6F5AC6009722F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBFAA991A6F5AC6009722F3 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0A6AC71A704F990020674E /* Ennee Menee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ennee Menee-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C0A6AC81A704F990020674E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4C0A6AC91A704F990020674E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4CBFAA901A6F5AC6009722F3 /* Ennee Menee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ennee Menee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBFAA941A6F5AC6009722F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CBFAA951A6F5AC6009722F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,12 +81,15 @@
 		4CBFAA921A6F5AC6009722F3 /* Ennee Menee */ = {
 			isa = PBXGroup;
 			children = (
+				4C0A6AC81A704F990020674E /* MBProgressHUD.h */,
+				4C0A6AC91A704F990020674E /* MBProgressHUD.m */,
 				4CBFAA951A6F5AC6009722F3 /* AppDelegate.swift */,
 				4CBFAA971A6F5AC6009722F3 /* ViewController.swift */,
 				4CBFAA991A6F5AC6009722F3 /* Main.storyboard */,
 				4CBFAA9C1A6F5AC6009722F3 /* Images.xcassets */,
 				4CBFAA9E1A6F5AC6009722F3 /* LaunchScreen.xib */,
 				4CBFAA931A6F5AC6009722F3 /* Supporting Files */,
+				4C0A6AC71A704F990020674E /* Ennee Menee-Bridging-Header.h */,
 			);
 			path = "Ennee Menee";
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBFAA981A6F5AC6009722F3 /* ViewController.swift in Sources */,
+				4C0A6ACA1A704F990020674E /* MBProgressHUD.m in Sources */,
 				4CBFAA961A6F5AC6009722F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +345,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ennee Menee/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ennee Menee/Ennee Menee-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,10 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ennee Menee/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ennee Menee/Ennee Menee-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -408,6 +421,7 @@
 				4CBFAAB11A6F5AC7009722F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CBFAAB21A6F5AC7009722F3 /* Build configuration list for PBXNativeTarget "Ennee MeneeTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +430,7 @@
 				4CBFAAB41A6F5AC7009722F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
