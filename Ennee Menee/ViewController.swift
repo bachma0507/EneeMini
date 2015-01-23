@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func buttonPress(sender: AnyObject) {
         
-        if !field1.text.isEmpty && !field2.text.isEmpty && !field3.text.isEmpty {
+        if field1.text != "" && field2.text != "" && field3.text != "" {
             
             DismissKeyboard()
             
@@ -57,7 +57,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
             
-        var randomNumber = arc4random_uniform(4)
+        var randomNumber = arc4random_uniform(3)
+            
+            println("Random number is: \(randomNumber)")
         
         if Int(randomNumber) == 0 {
             
@@ -84,12 +86,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
             
-//            if Int(randomNumber) == 4 {
+//            if Int(randomNumber) == 3 {
 //                
 //                resultLabel.text = "'\(field3.text)' is the way to go!"
 //                
 //            }
-//            
+//
 //            if Int(randomNumber) == 5 {
 //                
 //                resultLabel.text = "'\(field1.text)' is the way to go!"
@@ -105,10 +107,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         }
         
-        else {
+        if field1.text == "" && field2.text == "" && field3.text == "" {
             
             
-        resultLabel.text == "Are you some kind of imbecile, please enter something in the goddam fields, you jerk!"
+        resultLabel.text == "Please complete all fields."
         
         //resultLabel.textColor == UIColor.redColor()
     }
