@@ -25,6 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var goButton: UIButton!
     
+    @IBOutlet var qmarkButton: UIButton!
+    
     @IBOutlet var arrowImage: UIImageView!
     
     @IBAction func infoButtonPressed(sender: AnyObject) {
@@ -63,6 +65,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    @IBAction func qmarkButtonPressed(sender: AnyObject) {
+        
+        buttonPress(sender)
+        
+    }
     @IBAction func buttonPress(sender: AnyObject) {
         
         if field1.text != "" && field2.text != "" && field3.text != "" {
@@ -71,6 +79,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             arrowImage.hidden = false
             arrowImage.image = UIImage(named:"green_down_arrows")!
+            qmarkButton.hidden = true
+            goButton.hidden = true
+            
             
             let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             loadingNotification.mode = MBProgressHUDModeIndeterminate
@@ -156,7 +167,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //Looks for single or multiple taps.
         
-        
             
         field1.delegate = self
         field2.delegate = self
@@ -171,6 +181,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if Int(randomButton) == 0 {
             
             goButton.setTitle("Please tell me, oh Swami", forState: UIControlState.Normal)
+        
             
         }
         
@@ -210,6 +221,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             field3.text = nil
             resultLabel.text = nil
             arrowImage.hidden = true
+            qmarkButton.hidden = false
+            goButton.hidden = false
+            
+
             
             var randomButton = arc4random_uniform(4)
             

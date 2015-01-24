@@ -141,6 +141,19 @@
                                     <action selector="infoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="djY-kG-CQq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhs-Sr-ood">
+                                <rect key="frame" x="104" y="327" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="lje-3m-DI5"/>
+                                    <constraint firstAttribute="width" constant="150" id="yjt-Fg-nK1"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="qmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qmarkButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y3p-gh-uQe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -151,6 +164,7 @@
                             <constraint firstItem="Juc-bF-d69" firstAttribute="top" secondItem="9h3-dN-dLQ" secondAttribute="bottom" constant="4" id="Afg-hO-ZOm"/>
                             <constraint firstItem="9h3-dN-dLQ" firstAttribute="top" secondItem="EM4-n7-41p" secondAttribute="bottom" constant="10" id="C76-pM-a7f"/>
                             <constraint firstItem="ZTd-HH-WqH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="DcQ-LQ-97r"/>
+                            <constraint firstItem="Nhs-Sr-ood" firstAttribute="top" secondItem="ZA0-rE-Ecf" secondAttribute="bottom" constant="8" id="JP3-6A-1rD"/>
                             <constraint firstAttribute="centerX" secondItem="9h3-dN-dLQ" secondAttribute="centerX" id="Jzo-p2-0WM"/>
                             <constraint firstAttribute="centerX" secondItem="Hpj-NA-mnn" secondAttribute="centerX" id="MBB-Fj-Y2T"/>
                             <constraint firstAttribute="centerX" secondItem="ZTd-HH-WqH" secondAttribute="centerX" id="U7r-ih-O9c"/>
@@ -162,6 +176,7 @@
                             <constraint firstAttribute="centerX" secondItem="6v3-2Z-KcF" secondAttribute="centerX" id="f55-3H-rss"/>
                             <constraint firstItem="ZTd-HH-WqH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="geY-at-5Fd"/>
                             <constraint firstAttribute="centerX" secondItem="VJP-2r-n2G" secondAttribute="centerX" id="ine-me-Of5"/>
+                            <constraint firstAttribute="centerX" secondItem="Nhs-Sr-ood" secondAttribute="centerX" id="sYh-5g-rXz"/>
                             <constraint firstItem="EM4-n7-41p" firstAttribute="top" secondItem="8Qo-So-Whz" secondAttribute="bottom" constant="5" id="t5Z-mA-jKQ"/>
                             <constraint firstAttribute="centerX" secondItem="ZTd-HH-WqH" secondAttribute="centerX" id="tZR-ih-EoK"/>
                             <constraint firstItem="ZA0-rE-Ecf" firstAttribute="top" secondItem="kOW-1B-A34" secondAttribute="bottom" constant="18" id="v0a-oL-Lof"/>
@@ -176,6 +191,7 @@
                         <outlet property="field2" destination="9h3-dN-dLQ" id="lbg-2O-35G"/>
                         <outlet property="field3" destination="kOW-1B-A34" id="EdA-qP-wD5"/>
                         <outlet property="goButton" destination="ZA0-rE-Ecf" id="Shm-6b-Aj6"/>
+                        <outlet property="qmarkButton" destination="Nhs-Sr-ood" id="Vh4-Tf-CQg"/>
                         <outlet property="resultLabel" destination="Hpj-NA-mnn" id="rVK-84-V9r"/>
                     </connections>
                 </viewController>
@@ -184,4 +200,7 @@
             <point key="canvasLocation" x="521" y="308"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="qmark.png" width="150" height="150"/>
+    </resources>
 </document>
