@@ -107,10 +107,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         }
         
-        if field1.text == "" && field2.text == "" && field3.text == "" {
+        if field1.text == "" || field2.text == "" || field3.text == "" {
             
             
-        resultLabel.text == "Please complete all fields."
+            let alert = UIAlertView()
+            alert.title = "Oops!"
+            alert.message = "Please complete all fields."
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+            
+            //resultLabel.text = "Please complete all fields."
         
         //resultLabel.textColor == UIColor.redColor()
     }
@@ -235,6 +241,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         return result
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true);
+        return false;
     }
     
     
