@@ -8,7 +8,7 @@
 
 import UIKit
 
-let kInfoTitle = "Eenee Meenee"
+let kInfoTitle = "Eenee Menee"
 let kSubtitle = "Can't make up your mind: \n where to eat? what to wear? where to go? \n Enter your choices and let Eenee Meenee decide!"
 let kErrorTitle = "Connection error"
 let kSuccessTitle = "Your Lucky Numbers"
