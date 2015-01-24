@@ -8,6 +8,9 @@
 
 import UIKit
 
+let kInfoTitle = "Info"
+let kSubtitle = "This is a test."
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var field1: UITextField!
@@ -130,7 +133,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //Looks for single or multiple taps.
         
+//        let alert = UIAlertView()
+//        alert.title = "Eenee Meenee"
+//        alert.message = "Can't make up your mind: \n where to eat? \n what to wear? \n where to go? \n Enter your choices and let Eenee Meenee decide!"
+//        alert.addButtonWithTitle("Ok")
+//        alert.show()
         
+        //SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
+            
         field1.delegate = self
         field2.delegate = self
         field3.delegate = self
