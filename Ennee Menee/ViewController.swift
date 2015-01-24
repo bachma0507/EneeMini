@@ -84,25 +84,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if Int(randomNumber) == 0 {
             
-            resultLabel.text = "'\(field3.text)' is the way to go!"
+            resultLabel.text = "'\(field3.text.uppercaseString)' is the way to go!"
             
-            println(field3.text)
+            println(field3.text.uppercaseString)
             
         }
         
         if Int(randomNumber) == 1 {
             
-            resultLabel.text = "'\(field1.text)' is the way to go!"
+            resultLabel.text = "'\(field1.text.uppercaseString)' is the way to go!"
             
-            println(field1.text)
+            println(field1.text.uppercaseString)
             
         }
         
         if Int(randomNumber) == 2 {
             
-            resultLabel.text = "'\(field2.text)' is the way to go!"
+            resultLabel.text = "'\(field2.text.uppercaseString)' is the way to go!"
             
-            println(field2.text)
+            println(field2.text.uppercaseString)
             
         }
         
