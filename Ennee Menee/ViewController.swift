@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kInfoTitle = "Info"
-let kSubtitle = "This is a test."
+let kInfoTitle = "Eenee Meenee"
+let kSubtitle = "Can't make up your mind: \n where to eat? what to wear? where to go? \n Enter your choices and let Eenee Meenee decide!"
 let kErrorTitle = "Connection error"
 let kSuccessTitle = "Your Lucky Numbers"
 
@@ -27,6 +27,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var arrowImage: UIImageView!
     
+    @IBAction func infoButtonPressed(sender: AnyObject) {
+        
+        SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
+        
+//        let alert = UIAlertView()
+//        alert.title = "Eenee Meenee"
+//        alert.message = "Can't make up your mind: \n where to eat? \n what to wear? \n where to go? \n Enter your choices and let Eenee Meenee decide!"
+//        alert.addButtonWithTitle("Ok")
+//        alert.show()
+
+        
+    }
     
     @IBAction func feelingLuckyPressed(sender: AnyObject) {
         
@@ -144,11 +156,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //Looks for single or multiple taps.
         
-        let alert = UIAlertView()
-        alert.title = "Eenee Meenee"
-        alert.message = "Can't make up your mind: \n where to eat? \n what to wear? \n where to go? \n Enter your choices and let Eenee Meenee decide!"
-        alert.addButtonWithTitle("Ok")
-        alert.show()
         
             
         field1.delegate = self
