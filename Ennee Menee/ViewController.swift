@@ -10,6 +10,8 @@ import UIKit
 
 let kInfoTitle = "Info"
 let kSubtitle = "This is a test."
+let kErrorTitle = "Connection error"
+let kSuccessTitle = "Your Lucky Numbers"
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -37,11 +39,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         println("Your lucky numbers are: \(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)")
         
-        let alert = UIAlertView()
-        alert.title = "Your Lucky Numbers"
-        alert.message = "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)"
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+        let alert = SCLAlertView()
+        alert.showSuccess(kSuccessTitle, subTitle: "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)")
+
+        
+//        let alert = UIAlertView()
+//        alert.title = "Your Lucky Numbers"
+//        alert.message = "\(randomNumber1) \(randomNumber2) \(randomNumber3) \(randomNumber4) \(randomNumber5) \(randomNumber6)"
+//        alert.addButtonWithTitle("Ok")
+//        alert.show()
         
     }
     
@@ -113,11 +119,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if field1.text == "" || field2.text == "" || field3.text == "" {
             
             
-            let alert = UIAlertView()
-            alert.title = "Oops!"
-            alert.message = "Please complete all fields."
-            alert.addButtonWithTitle("Ok")
-            alert.show()
+//            let alert = UIAlertView()
+//            alert.title = "Oops!"
+//            alert.message = "Please complete all fields."
+//            alert.addButtonWithTitle("Ok")
+//            alert.show()
+            
+            
+            SCLAlertView().showError("Oops...", subTitle:"Please complete all fields", closeButtonTitle:"OK")
+            
+            //SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
             
             //resultLabel.text = "Please complete all fields."
         
@@ -133,13 +144,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //Looks for single or multiple taps.
         
-//        let alert = UIAlertView()
-//        alert.title = "Eenee Meenee"
-//        alert.message = "Can't make up your mind: \n where to eat? \n what to wear? \n where to go? \n Enter your choices and let Eenee Meenee decide!"
-//        alert.addButtonWithTitle("Ok")
-//        alert.show()
+        let alert = UIAlertView()
+        alert.title = "Eenee Meenee"
+        alert.message = "Can't make up your mind: \n where to eat? \n what to wear? \n where to go? \n Enter your choices and let Eenee Meenee decide!"
+        alert.addButtonWithTitle("Ok")
+        alert.show()
         
-        //SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
             
         field1.delegate = self
         field2.delegate = self
@@ -256,6 +266,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         self.view.endEditing(true);
         return false;
+    }
+    
+    func firstAlert(){
+        
+        SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
     }
     
     
